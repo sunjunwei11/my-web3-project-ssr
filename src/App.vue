@@ -30,9 +30,11 @@ let loading = ref(true);
 
 const init = async () => {
   // 检测是否安装了钱包
-  const provider = await detectEthereumProvider();
-  if (provider) {
-    hasMetaMask.value = true;
+  if (!import.meta.env.SSR) {
+    const provider = await detectEthereumProvider();
+    if (provider) {
+      hasMetaMask.value = true;
+    }
   }
   loading.value = false;
 };

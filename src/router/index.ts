@@ -1,12 +1,18 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import {
+  createRouter as _createRouter,
+  createWebHistory,
+  createMemoryHistory,
+} from 'vue-router';
 
 import baseRouters from './modules/base';
 
 const routes = [...baseRouters];
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes,
-});
-
-export default router;
+export function createRouter() {
+  return _createRouter({
+    // use appropriate history implementation for server/client
+    // import.meta.env.SSR is injected by Vite.
+    history: import.meta.env.SSR ? createMemoryHistory() : createWebHistory(),
+    routes,
+  });
+}

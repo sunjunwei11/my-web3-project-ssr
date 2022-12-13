@@ -1,9 +1,13 @@
-import { createApp } from 'vue';
-import '@/styles/index.scss';
-// element里的组件如果不写在模板里，只作为API在TS中调用，这种情况无法自动导入，需要自己手动引入
-import '@/styles/elementCom';
+import { createSSRApp } from 'vue';
+import { createPinia } from 'pinia';
 import App from './App.vue';
-import router from './router';
-import store from './store';
+import { createRouter } from './router';
 
-createApp(App).use(router).use(store).mount('#app');
+export const createApp = () => {
+  const app = createSSRApp(App);
+  const router = createRouter();
+  app.use(router);
+  const pinia = createPinia();
+  app.use(pinia);
+  return { app, router, pinia };
+};

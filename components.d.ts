@@ -7,21 +7,20 @@ export {};
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    ElAlert: typeof import('element-plus/es')['ElAlert'];
-    ElAside: typeof import('element-plus/es')['ElAside'];
-    ElButton: typeof import('element-plus/es')['ElButton'];
-    ElContainer: typeof import('element-plus/es')['ElContainer'];
-    ElDivider: typeof import('element-plus/es')['ElDivider'];
-    ElHeader: typeof import('element-plus/es')['ElHeader'];
-    ElIcon: typeof import('element-plus/es')['ElIcon'];
-    ElMain: typeof import('element-plus/es')['ElMain'];
-    ElMenu: typeof import('element-plus/es')['ElMenu'];
-    ElMenuItem: typeof import('element-plus/es')['ElMenuItem'];
-    ElTabPane: typeof import('element-plus/es')['ElTabPane'];
-    ElTabs: typeof import('element-plus/es')['ElTabs'];
-    ElTag: typeof import('element-plus/es')['ElTag'];
+    ElAlert: typeof import('element-plus/lib')['ElAlert'];
+    ElAside: typeof import('element-plus/lib')['ElAside'];
+    ElButton: typeof import('element-plus/lib')['ElButton'];
+    ElContainer: typeof import('element-plus/lib')['ElContainer'];
+    ElDivider: typeof import('element-plus/lib')['ElDivider'];
+    ElHeader: typeof import('element-plus/lib')['ElHeader'];
+    ElIcon: typeof import('element-plus/lib')['ElIcon'];
+    ElMain: typeof import('element-plus/lib')['ElMain'];
+    ElMenu: typeof import('element-plus/lib')['ElMenu'];
+    ElMenuItem: typeof import('element-plus/lib')['ElMenuItem'];
+    ElTabPane: typeof import('element-plus/lib')['ElTabPane'];
+    ElTabs: typeof import('element-plus/lib')['ElTabs'];
+    ElTag: typeof import('element-plus/lib')['ElTag'];
     HeaderCom: typeof import('./src/components/HeaderCom.vue')['default'];
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default'];
     IEpApple: typeof import('~icons/ep/apple')['default'];
     IEpMilkTea: typeof import('~icons/ep/milk-tea')['default'];
     RouterLink: typeof import('vue-router')['RouterLink'];
@@ -29,6 +28,6 @@ declare module '@vue/runtime-core' {
     SideMenu: typeof import('./src/components/SideMenu.vue')['default'];
   }
   export interface ComponentCustomProperties {
-    vLoading: typeof import('element-plus/es')['ElLoadingDirective'];
+    vLoading: typeof import('element-plus/lib')['ElLoadingDirective'];
   }
 }

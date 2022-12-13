@@ -40,7 +40,10 @@ export default defineConfig({
           enabledCollections: ['ep'],
         }),
 
-        ElementPlusResolver(),
+        ElementPlusResolver({
+          importStyle: 'css',
+          ssr: true,
+        }),
       ],
     }),
     Icons({

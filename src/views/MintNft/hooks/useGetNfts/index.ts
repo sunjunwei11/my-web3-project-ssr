@@ -2,6 +2,7 @@ import { ref, Ref } from 'vue';
 import { TabPaneName } from 'element-plus';
 import { getAllDigiNfts, getMyDigiNfts } from './utils';
 import { NftItem } from '../../types';
+import { useCurrentAddressStore } from '@/store';
 
 function useGetNfts() {
   const allNftLoading = ref(false);
@@ -22,6 +23,11 @@ function useGetNfts() {
   };
 
   async function getNfts() {
+    const currentAddressStore = useCurrentAddressStore();
+    const { currentAddress } = currentAddressStore;
+    if (!currentAddress) {
+      return;
+    }
     if (nftTab.value === NftTab.All) {
       await getAllNft();
     } else {
