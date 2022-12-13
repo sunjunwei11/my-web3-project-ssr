@@ -43,9 +43,9 @@ console.log('process.env.NODE_ENV: ', process.env.NODE_ENV);
     // use vite's connect instance as middleware
     app.use(vite.middlewares);
   } else {
-    app.use('/assets', express.static(resolve('../dist/client/assets')));
+    app.use('/ssr/assets', express.static(resolve('../dist/client/assets')));
     app.use(
-      '/publicAssets',
+      '/ssr/publicAssets',
       express.static(resolve('../dist/client/publicAssets'))
     );
   }

@@ -2,18 +2,18 @@ import { RouteRecordRaw } from 'vue-router';
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
+    path: '/ssr',
     redirect: () => {
       return { name: 'mintToken' };
     },
   },
   {
-    path: '/mint-token',
+    path: '/ssr/mint-token',
     name: 'mintToken',
     component: () => import('@/views/MintToken'),
   },
   {
-    path: '/mint-nft',
+    path: '/ssr/mint-nft',
     name: 'mintNft',
     component: () => import('@/views/MintNft'),
   },

@@ -20,7 +20,7 @@ var __async = (__this, __arguments, generator) => {
 };
 import { ElAlert, ElTag, ElDivider, ElButton, ElLoadingDirective } from "element-plus/lib";
 import { u as useContractStore, a as useCurrentAddressStore, b as useTokenStore, c as useContractAddressStore, _ as _export_sfc } from "../entry-server.js";
-import { a as addToken2Metamask, i as initializeTokenContract, c as connectWallet } from "./initializeContract.a476b3e3.js";
+import { a as addToken2Metamask, i as initializeTokenContract, c as connectWallet } from "./initializeContract.d272d663.js";
 import { ref, defineComponent, onMounted, unref, withCtx, createTextVNode, toDisplayString, mergeProps, useSSRContext } from "vue";
 import { ssrRenderAttrs, ssrRenderComponent, ssrInterpolate, ssrGetDirectiveProps } from "vue/server-renderer";
 import { ethers } from "ethers";

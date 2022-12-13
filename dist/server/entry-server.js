@@ -46,7 +46,7 @@ const elMain = "";
 const elAside = "";
 const elHeader = "";
 const elContainer = "";
-const logo = "/assets/logo.aa231397.png";
+const logo = "/ssr/assets/logo.aa231397.png";
 const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __name: "HeaderCom",
   __ssrInlineRender: true,
@@ -524,20 +524,20 @@ _sfc_main.setup = (props, ctx) => {
 const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-cd8bd1ee"]]);
 const routes$1 = [
   {
-    path: "/",
+    path: "/ssr",
     redirect: () => {
       return { name: "mintToken" };
     }
   },
   {
-    path: "/mint-token",
+    path: "/ssr/mint-token",
     name: "mintToken",
-    component: () => import("./assets/index.08f77ea5.js")
+    component: () => import("./assets/index.12c58f3f.js")
   },
   {
-    path: "/mint-nft",
+    path: "/ssr/mint-nft",
     name: "mintNft",
-    component: () => import("./assets/index.6a814363.js")
+    component: () => import("./assets/index.0a701e86.js")
   }
 ];
 const routes = [...routes$1];
